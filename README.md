@@ -1,7 +1,6 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This app is a hello_world app create in Ruby on Rails which is dockerized and it's covered with sidekiq as a gem and Redis as a service.
 
 Things you may want to cover:
 
