@@ -1,23 +1,16 @@
 # README
 
-This app is a hello_world app create in Ruby on Rails which is dockerized and it's covered with sidekiq as a gem and Redis as a service.
+This app is a hello_world app create in Ruby on Rails which is dockerized and it's covered with sidekiq and Redis as a service.
 
-Things you may want to cover:
+Project flow:
 
-* Ruby version
+There are 4 services: Ruby on rails, Sidekiq, Redis and a postgres (for local revisions).
 
-* System dependencies
+The ruby and the sidekiq share a volume to share the controllers and gems too. 
+Redis is just the official redis image.
 
-* Configuration
+In ECS these work as 1 service unified in the Task definition and PostgreSQL run on RDS.
 
-* Database creation
+*If you would like to test this app locally, just clone it; run 'docker-compose up' and check in the console that everytime that you hit the Ruby project (localhost:3000) a job will be scheduled in Sidekiq. This is just for testing and simulation.
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Author: Luis E. Lopez
